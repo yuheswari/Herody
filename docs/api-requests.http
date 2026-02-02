@@ -1,0 +1,56 @@
+@baseUrl = http://127.0.0.1:8000/api
+
+### Create Author
+POST {{baseUrl}}/authors
+Content-Type: application/json
+
+{
+  "name": "Jane Austen",
+  "email": "jane@example.com",
+  "bio": "English novelist."
+}
+
+### List Authors
+GET {{baseUrl}}/authors
+
+### Get Author
+GET {{baseUrl}}/authors/1
+
+### Update Author
+PATCH {{baseUrl}}/authors/1
+Content-Type: application/json
+
+{
+  "bio": "Updated bio."
+}
+
+### Delete Author
+DELETE {{baseUrl}}/authors/1
+
+### Create Book
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "author_id": 1,
+  "title": "Pride and Prejudice",
+  "description": "A classic novel.",
+  "published_at": "1813-01-28"
+}
+
+### List Books
+GET {{baseUrl}}/books
+
+### Get Book
+GET {{baseUrl}}/books/1
+
+### Update Book
+PATCH {{baseUrl}}/books/1
+Content-Type: application/json
+
+{
+  "title": "Pride & Prejudice"
+}
+
+### Delete Book
+DELETE {{baseUrl}}/books/1
