@@ -27,8 +27,7 @@ return [
     |
     | Here you may specify the number of minutes that you wish the session
     | to be allowed to remain idle before it expires. If you want them
-    | to expire immediately when the browser is closed then you may
-    | indicate that via the expire_on_close configuration option.
+    | to expire immediately when the browser is closed, set it here.
     |
     */
 
@@ -38,7 +37,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Encryption
+    | Encrypt Session Data
     |--------------------------------------------------------------------------
     |
     | This option allows you to easily specify that all of your session data
@@ -77,12 +76,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Database Table
+    | Session Database Table / Collection
     |--------------------------------------------------------------------------
     |
-    | When using the "database" session driver, you may specify the table to
-    | be used to store sessions. Of course, a sensible default is defined
-    | for you; however, you're welcome to change this to another table.
+    | When using the "database" session driver, you may specify the table or
+    | collection that should be used to store the session data. Of course,
+    | a default value is already configured; change if you wish.
     |
     */
 
@@ -94,10 +93,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | When using one of the framework's cache driven session backends, you may
-    | define the cache store which should be used to store the session data
-    | between requests. This must match one of your defined cache stores.
+    | define the cache store that should be used for these sessions. This
+    | value must match one of the application's configured cache stores.
     |
-    | Affects: "dynamodb", "memcached", "redis"
+    | Affects: "memcached", "redis"
     |
     */
 
@@ -139,7 +138,7 @@ return [
     |
     | The session cookie path determines the path for which the cookie will
     | be regarded as available. Typically, this will be the root path of
-    | your application, but you're free to change this when necessary.
+    | your application but you're free to change this when necessary.
     |
     */
 
